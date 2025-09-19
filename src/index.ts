@@ -121,8 +121,8 @@ function getDecodedEntity(
             const decodeSecondChar = entity[2];
             const decodeCode =
                 decodeSecondChar == 'x' || decodeSecondChar == 'X'
-                    ? parseInt(entity.substr(3), 16)
-                    : parseInt(entity.substr(2));
+                    ? parseInt(entity.slice(3), 16)
+                    : parseInt(entity.slice(2));
 
             decodeResult =
                 decodeCode >= 0x10ffff
